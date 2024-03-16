@@ -1,0 +1,85 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+body{
+  background-color: darkslategrey;
+}
+h1{
+  text-align: center;
+  font-family: sans-serif
+}
+#Start{
+  display: flex;
+  justify-content: center;
+}
+button{
+  color: white;
+  background-color: darkcyan;
+  border-radius: 10px;
+  width: 5rem;
+}
+section{
+  max-width: 40rem;
+  margin: auto;
+  padding: 10px;
+}
+section table,th,td{
+  border:  1px solid darkgray;
+  margin: auto;
+  padding: 10px;
+  font-family: sans-serif;
+  color: azure;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px #fff inset;
+  border-radius: 50%;
+  position: relative;
+  animation: l8-0 1.5s linear infinite;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  display:none;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 2px);
+  box-shadow: inherit;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l8-1 1.5s linear infinite;
+}
+@keyframes l8-1 {
+  0% {
+    transform-origin: -27px 50%;
+    width: 20px;
+    transform: translateY(-50%) rotate(0);
+  }
+  100% {
+    transform-origin: -12px 50%;
+    width: 50px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+@keyframes l8-0 {
+  0% {
+    width: 50px;
+    transform: translate(0);
+  }
+  100% {
+    width: 20px;
+    transform: translate(37px);
+  }
+}
